@@ -12,13 +12,11 @@ def create_dataframe():
 
 
 def add_month_cost(df, month_costs):
-    # add 'Month cost' column here
-    df["Custo mensal"] = [50000, 800000, 200000, 500000]
+    df['Month cost'] = month_costs
 
 
 def add_annual_cost_in_thousands(df):
-    # add 'Annual cost in thousands' column here
-    df["Custo anual em milhares"] = (df["Custo mensal"] * 12 // 1000).astype("int64")
+    df['Annual cost in thousands'] = 12 * df['Month cost'] // 1000
 
 
 if __name__ == "__main__":
